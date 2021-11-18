@@ -14,6 +14,7 @@
 		5C69D39E2746A1EE00E66EAA /* Web3BatchTransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C69D39D2746A1EE00E66EAA /* Web3BatchTransactionTests.swift */; };
 		5C69D3A82746A1EE00E66EAA /* Web3BatchTransactionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C69D3A72746A1EE00E66EAA /* Web3BatchTransactionUITests.swift */; };
 		5C69D3AA2746A1EE00E66EAA /* Web3BatchTransactionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C69D3A92746A1EE00E66EAA /* Web3BatchTransactionUITestsLaunchTests.swift */; };
+		5C69D3B82746A2B500E66EAA /* web3swift in Frameworks */ = {isa = PBXBuildFile; productRef = 5C69D3B72746A2B500E66EAA /* web3swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C69D3B82746A2B500E66EAA /* web3swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = Web3BatchTransaction;
+			packageProductDependencies = (
+				5C69D3B72746A2B500E66EAA /* web3swift */,
+			);
 			productName = Web3BatchTransaction;
 			productReference = 5C69D3892746A1EB00E66EAA /* Web3BatchTransaction.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 5C69D3802746A1EB00E66EAA;
+			packageReferences = (
+				5C69D3B62746A2B500E66EAA /* XCRemoteSwiftPackageReference "web3swift" */,
+			);
 			productRefGroup = 5C69D38A2746A1EB00E66EAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -585,6 +593,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C69D3B62746A2B500E66EAA /* XCRemoteSwiftPackageReference "web3swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:yaroslavyaroslav/web3swift.git";
+			requirement = {
+				branch = "feature/batch-transaction";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C69D3B72746A2B500E66EAA /* web3swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C69D3B62746A2B500E66EAA /* XCRemoteSwiftPackageReference "web3swift" */;
+			productName = web3swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C69D3812746A1EB00E66EAA /* Project object */;
 }
