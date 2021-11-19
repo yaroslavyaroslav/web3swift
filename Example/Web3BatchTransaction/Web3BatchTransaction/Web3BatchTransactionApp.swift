@@ -11,7 +11,7 @@ import SwiftUI
 struct Web3BatchTransactionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(_walletAddress: "0x")
         }
     }
 }
