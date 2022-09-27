@@ -54,9 +54,10 @@ public struct CodableTransaction {
         set { envelope.value = newValue }
     }
 
-    // MARK: - Ruins signing and decoding tests if tied to envelop
-    /// any additional data for the transaction
-    public var data: Data
+    public var data: Data  {
+        get { return envelope.data }
+        set { envelope.data = newValue }
+    }
 
     // MARK: - Properties transaction type related either sends to a node if exist
 
@@ -290,8 +291,6 @@ extension CodableTransaction {
                 chainID: BigUInt = 0, value: BigUInt = 0, data: Data = Data(),
                 gasLimit: BigUInt = 0, maxFeePerGas: BigUInt? = nil, maxPriorityFeePerGas: BigUInt? = nil, gasPrice: BigUInt? = nil,
                 accessList: [AccessListEntry]? = nil, v: BigUInt = 1, r: BigUInt = 0, s: BigUInt = 0) {
-        // FIXME: This is duplication and should be fixed.
-        self.data = data
         self.accessList = accessList
         self.callOnBlock = .latest
 
